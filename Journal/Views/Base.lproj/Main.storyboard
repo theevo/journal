@@ -52,7 +52,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fz-cy-pwC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171.0144927536232" y="148.66071428571428"/>
+            <point key="canvasLocation" x="1049" y="149"/>
         </scene>
         <!--Entry Detail View Controller-->
         <scene sceneID="uOH-Kx-glW">
@@ -62,12 +62,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuB-Uc-wlc">
-                                <rect key="frame" x="20" y="88" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ifz-5F-A5g">
+                                <rect key="frame" x="31" y="152" width="352" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="bqr-sK-5q4"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eH-ez-KVe">
                                 <rect key="frame" x="189" y="565" width="36" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,24 +79,21 @@
                                     <action selector="clearButtonTapped:" destination="HNJ-1X-Avm" eventType="touchUpInside" id="SZg-7U-g5C"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ifz-5F-A5g">
-                                <rect key="frame" x="20" y="296" width="374" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xuB-Uc-wlc">
+                                <rect key="frame" x="31" y="103" width="352" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6gb-7r-auw">
-                                <rect key="frame" x="78" y="153" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ifz-5F-A5g" firstAttribute="top" secondItem="xuB-Uc-wlc" secondAttribute="bottom" constant="15" id="Hj1-Oz-CT2"/>
+                            <constraint firstItem="xuB-Uc-wlc" firstAttribute="centerX" secondItem="C0E-HN-zgX" secondAttribute="centerX" id="NnY-db-rGO"/>
+                            <constraint firstItem="ifz-5F-A5g" firstAttribute="width" secondItem="C0E-HN-zgX" secondAttribute="width" multiplier="0.85" id="Vmh-0r-qrw"/>
+                            <constraint firstItem="xuB-Uc-wlc" firstAttribute="width" secondItem="C0E-HN-zgX" secondAttribute="width" multiplier="0.85" id="hU1-Me-fXR"/>
+                            <constraint firstItem="ifz-5F-A5g" firstAttribute="centerX" secondItem="C0E-HN-zgX" secondAttribute="centerX" id="umO-5a-384"/>
+                            <constraint firstItem="xuB-Uc-wlc" firstAttribute="top" secondItem="C0E-HN-zgX" secondAttribute="top" constant="15" id="yYs-KP-sBJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C0E-HN-zgX"/>
                     </view>
                     <navigationItem key="navigationItem" id="HBL-3S-fov">

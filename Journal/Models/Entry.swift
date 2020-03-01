@@ -10,11 +10,12 @@ import Foundation
 
 class Entry {
     var timeStamp: Date
-    var title: String
+    var journalTitle: String
     var text: String
+    
     init(title: String, text: String) {
         timeStamp = Date()
-        self.title = title
+        self.journalTitle = title
         self.text = text
     }
 }
@@ -22,7 +23,7 @@ class Entry {
 extension Entry: Equatable {
     static func == ( lhs: Entry, rhs: Entry) -> Bool {
         return lhs.timeStamp == rhs.timeStamp &&
-            lhs.title == rhs.title &&
+            lhs.journalTitle == rhs.journalTitle &&
             lhs.text == rhs.text
     }
 }
